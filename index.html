@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date and Time</title>
+    <link rel="stylesheet" href="main.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing:border-box ;
+         
+        }
+     
+        .border1{
+            animation: anim 7s infinite;
+            transition: all;
+            transition-duration: 200;
+        }
+
+        @keyframes anim {
+            0%{
+                border:  9px solid rgb(5, 70, 87);
+            }
+            
+            25%{
+                border: 9px solid rgb(228, 128, 128);
+            }
+            50%{
+                border: 9px solid rgb(88, 233, 66);
+            }
+            75%{
+                border: 9px solid rgb(117, 60, 216);
+            }
+            100%{
+                border: 9px solid rgb(208, 23, 168);
+            }
+        }
+      .chang{
+        animation: krdo 8s infinite;
+      }
+      @keyframes krdo {
+        0%{
+            background:url(./images/bg1.jpg);
+            background-repeat: no-repeat;
+            background-size: 100vw 100vh;
+        }
+        25%{
+            background:url(./images/bg2.jpg);
+            background-repeat: no-repeat;
+            background-size: 100vw 100vh;
+        }
+        75%{
+            background:url(./images/bg3.jpg);
+            background-repeat: no-repeat;
+            background-size: 100vw 100vh;
+        }
+        100%{
+            background:url(./images/bg4.jpg);
+            background-repeat: no-repeat;
+            background-size: 100vw 100vh;
+        } 
+      }
+    </style>
+</head>
+<body>
+    <section class="w-[100vw] h-[100vh] bg-gray-600 flex justify-center chang">
+            <div class="w-[300px] h-[300px] rounded-full border-white bg-black border-[9px] m-28 border1 flex justify-center items-center relative clockbg  shadow-white shadow-2xl">
+                <div class="flex flex-col justify-center">
+                    <div class="w-[160px] h-[60px] bg-black rounded-xl flex justify-center items-center">
+                        <div class="text-green-600 text-4xl ">Time</div>
+                        <div id="hr" class="p-2 text-4xl text-white  font-extrabold ">00</div>
+                        <div id="dot" class="p-1 text-4xl text-green-600  font-extrabold">:</div>
+                        <div id="mn" class="p-1 text-4xl text-white  font-extrabold ">00</div>
+                    </div>
+                    <div class="bg-black text-orange-600 w-36 h-10 mx-auto flex p-2 text-3xl font-extrabold -ml-12"><span class=""> Date  </span> :<span id="dat" class="text-white pl-1">00</span>-<span id="month" class="text-white pl-1">00</span>-<span id="year" class="text-white pl-1">0000</span></div>
+                </div>
+            </div>
+    </section>
+    <script src="./script.js"></script>
+</body>
+</html>
